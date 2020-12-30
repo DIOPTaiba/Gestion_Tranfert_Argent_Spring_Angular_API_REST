@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Transfert} from '../model/transfert';
+import {TransfertService} from '../services/transfert.service';
 
 @Component({
     selector: 'app-transfert',
@@ -7,9 +9,9 @@ import {Component, OnInit} from '@angular/core';
 })
 export class TransfertComponent implements OnInit {
 
-    transferts: string[]; /*un tableau de chînes de caractères*/
-    constructor() {
-        this.transferts = ['T1', 'T2', 'T3'];
+    transferts: Transfert[]; /*un tableau de chînes de caractères*/
+    constructor(private transfertService: TransfertService) {
+        this.transferts = transfertService.listeTransfert();
     }
 
     ngOnInit(): void {

@@ -1,1 +1,37 @@
-<p>add-transfert works!</p>
+<div class="container">
+    <div>
+        <h2>Faire un Transfert</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+
+            <label>ID</label>
+                <input type="number"
+                       [(ngModel)]="newTransfert.id"
+                       name="idTransfert" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Montant</label>
+            <input
+                type="number" [(ngModel)]="newTransfert.montant"
+                name="montant" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Date Transfert</label>
+            <input type="date"
+                   [(ngModel)]="newTransfert.dateTransfert"
+                   name="date" class="form-control">
+        </div>
+        <div class="mt-2">
+            <button type="submit"
+                    (click)="addTransfert()"
+                    class="btn btn-success">Valider
+            </button>
+        </div>
+        <div>
+            <h3 class="alert-success">
+                {{ message }}
+            </h3>
+        </div>
+    </form>
+</div>
