@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TransfertComponent } from './transfert/transfert.component';
+import { AddTransfertComponent } from './add-transfert/add-transfert.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TransfertComponent,
+    AddTransfertComponent
   ],
   imports: [
     BrowserModule,
