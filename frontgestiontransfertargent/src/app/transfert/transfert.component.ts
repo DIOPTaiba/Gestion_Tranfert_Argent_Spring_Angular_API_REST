@@ -17,4 +17,13 @@ export class TransfertComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    // tslint:disable-next-line:typedef
+    supprimerTransfert(transfert: Transfert)
+    {
+        /*console.log(transfert);*/
+        const conf = confirm('Etes-vous sûr de vouloir supprimer ?');
+        if (conf){
+            this.transfertService.supprimerTransfert(transfert);
+        }
+    }
 }
